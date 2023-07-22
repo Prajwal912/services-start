@@ -2,14 +2,13 @@
   <div class="row">
     <div class="col-xs-12 col-md-8 col-md-offset-2">
       <span style="color: red;">
-      <app-new-account (accountAdded)="onAccountAdded($event)"></app-new-account>
+      <app-new-account></app-new-account>
      </span>
       <hr>
       <app-account
         *ngFor="let acc of accounts; let i = index"
         [accFromParentPrevFromNewAcc]="acc"
-        [idsFromParent]="i"
-        (statusChanged)="onStatusChanged($event)"></app-account>
+        [idsFromParent]="i"></app-account>
     </div>
   </div>
 </div>
